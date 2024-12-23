@@ -1,0 +1,536 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background: #f4f4f9;
+}
+
+.navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+.form-inline {
+    margin-right: 1rem;
+}
+
+.btn-outline-secondary {
+    margin-left: 0.5rem;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-danger {
+    margin-left: 0.5rem;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+    margin-top: 55px;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+}
+
+
+.sidebar ul li .countries-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+    margin-left: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.sidebar ul li .countries-list li {
+    padding: 5px 0;
+    transition: padding 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.sidebar ul li .countries-list li:hover {
+    background-color: #555;
+    padding-left: 10px;
+}
+
+.sidebar ul li .fa-chevron-down,
+.sidebar ul li .fa-chevron-up {
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar ul.sports-list {
+    display: none;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    display: flex;
+    gap: 25px;
+
+    padding: 25px;
+}
+
+.bet-card {
+    top: 60px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-right: 20px;
+    max-height: 230px;
+}
+
+.bet-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bet-card h2 i {
+    margin-right: 10px;
+}
+
+.bet-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.bet-card .live-icon {
+    color: #ff0000;
+}
+
+.bet-card .time {
+    font-size: 14px;
+    color: #888;
+}
+
+.bet-card .bet-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.bet-card button {
+    background-color: #2a2a2a;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bet-card button i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.bet-card button small {
+    font-size: 12px;
+}
+
+.bet-card button:hover {
+    background-color: #3a3a3a;
+}
+
+.sports-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.sports-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    width: auto;
+}
+
+.sports-icons div i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.sports-icons div small {
+    color: #ccc;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sports-icons .selected {
+    background-color: #ff0055;
+    border-radius: 10px;
+    padding: 10px;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.sports-icons div:hover {
+    transform: scale(1.2);
+    background-color: #3a3a3a;
+    border-radius: 10px;
+}
+
+
+.selected {
+    background-color: #ff0055;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.bet-slip {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 60px;
+    height: auto;
+
+}
+
+.bet-slip h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.bet-slip p {
+    font-size: 14px;
+    color: #888;
+}
+
+
+.vertical-divider {
+    border-left: 1px solid #888;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.save-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff0055;
+    cursor: pointer;
+}
+
+.live-button {
+    background-color: #00ff00;
+    border: none;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .bet-card,
+    .bet-slip {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .sports-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sports-icons i {
+        margin: 5px;
+        font-size: 20px;
+    }
+}
+
+
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.match-container {
+    margin-bottom: 30px;
+}
+
+.match-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.live-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.icon-pin:before {
+    content: '\1F4CC';
+}
+
+.icon-heart:before {
+    content: '\2665';
+    color: red;
+}
+
+.match-time {
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.match-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #2a2a3c;
+    border: 1px solid #444;
+}
+
+.match-table th,
+.match-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.match-table th {
+    background-color: #333344;
+    font-weight: bold;
+}
+
+.match-table td {
+    background-color: #1e1e2f;
+}
+
+.match-table tr:hover {
+    background-color: #2ecc71;
+    color: black;
+}
+
+.live-button:hover {
+    background-color: #27ae60;
+}
+
+.bet-slip {
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    min-height: 250px;
+}
+
+.bet-slip-tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+    margin-bottom: 16px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab.active {
+    color: #fff;
+    border-bottom: 2px solid #ff1744;
+}
+
+.tab-content {
+    font-size: 14px;
+}
+
+.coupon-list {
+    list-style: none;
+    padding: 0;
+}
+
+.coupon-list li {
+    text-align: left;
+    margin: 10px 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-item small {
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-item input,
+.nav-item select {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.nav-item input::placeholder {
+    color: #888;
+}
+
+.nav-item select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.search-bar i {
+    color: #888;
+    margin-right: 5px;
+}
