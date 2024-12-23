@@ -34,7 +34,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="{{ asset('images/Perfil.jpg') }}" alt="Avatar" class="rounded-circle me-2"
                                 style="width: 30px; height: 30px;">
-                            <span class="me-2 fw-bold">TOTAL $0.00 |</span>Hacer un depósito
+                            <span class="me-2 fw-bold">TOTAL $10.00 |</span>Hacer un depósito
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
                             <li>

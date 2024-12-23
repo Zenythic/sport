@@ -113,13 +113,13 @@
 
 <div class="nav-bar" style="margin-top: 20px;">
     <div class="nav-item selected">
-        <small>Partidos en Vivo</small>
+        <a href="#partidos-en-vivo" class="no-underline"><small>Partidos en Vivo</small></a>
     </div>
     <div class="nav-item">
-        <small>Recomendados</small>
+        <a href="#recomendados" class="no-underline"><small>Recomendados</small></a>
     </div>
     <div class="nav-item">
-        <small>Próximos</small>
+        <a href="#proximos" class="no-underline"><small>Próximos</small></a>
     </div>
     <div class="nav-item search-bar">
         <i class="fa fa-search"></i>
@@ -141,7 +141,7 @@
 
 <h2 style="margin-left: 20px; font-size: 24px; margin-top: 20px;">Partidos en vivo</h2>
 @foreach ($matches as $match)
-    <div class="match-container"
+    <div class="match-container" id="partidos-en-vivo"
         style="margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-left: 20px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start;">
             <div style="flex: 1; margin-right: 10px;">
@@ -244,7 +244,7 @@
 
 <h2 style="margin-left: 20px; font-size: 24px; margin-top: 20px;">Partidos Recomendados</h2>
 @foreach ($recommendedMatches as $match)
-    <div class="match-container"
+    <div class="match-container" id="recomendados"
         style="margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-left: 20px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start;">
             <div style="flex: 1; margin-right: 10px;">
@@ -346,7 +346,7 @@
 
 <h2 style="margin-left: 20px; font-size: 24px; margin-top: 20px;">Próximos Partidos</h2>
 @foreach ($upcomingMatches as $match)
-    <div class="match-container"
+    <div class="match-container" id="proximos"
         style="margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-left: 20px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start;">
 
