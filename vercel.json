@@ -3,13 +3,9 @@
     "builds": [
         {
             "src": "api/index.php",
-            "use": "vercel-php@0.6.0",
+            "use": "vercel-php@0.5.4",
             "config": {
-                "runtime": "php8.0",
-                "additionalDependencies": [
-                    "libssl1.1",
-                    "libcrypto1.1"
-                ]
+                "runtime": "php8.1"
             }
         },
         {
