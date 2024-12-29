@@ -39,9 +39,7 @@
             "@php artisan package:discover --ansi"
         ],
         "post-install-cmd": [
-            "@php artisan package:discover --ansi",
-            "[ ! -f /usr/lib/x86_64-linux-gnu/libssl.so.10 ] && ln -s /usr/lib/x86_64-linux-gnu/libssl.so.1.0.0 /usr/lib/x86_64-linux-gnu/libssl.so.10 || true",
-            "[ ! -f /usr/lib/x86_64-linux-gnu/libcrypto.so.10 ] && ln -s /usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /usr/lib/x86_64-linux-gnu/libcrypto.so.10 || true"
+            "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -51,6 +49,11 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "vercel-build": [
+            "@php artisan config:cache",
+            "@php artisan route:cache",
+            "@php artisan view:cache"
         ]
     },
     "extra": {
@@ -69,4 +72,3 @@
     "minimum-stability": "stable",
     "prefer-stable": true
 }
-
